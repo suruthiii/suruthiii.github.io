@@ -128,10 +128,28 @@
         <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
             <!-- Logo with Icon and Gradient -->
             <a href="#" class="font-bold text-2xl tracking-wider group relative flex items-center gap-2">
-                <i data-lucide="sparkles" class="w-5 h-5 text-accent-purple group-hover:rotate-12 transition-transform duration-300"></i>
-                <span class="bg-clip-text  bg-gradient-to-r rom-accent-blue via-accent-purple to-accent-purple-light group-hover:from-accent-purple transition-all duration-300">SM.</span>
+                <i data-lucide="sparkles"
+                   class="w-5 h-5 text-accent-purple group-hover:rotate-12 transition-transform duration-300"></i>
+            
+                <span
+                    class="
+                        bg-clip-text text-transparent
+                        bg-gradient-to-r
+                        from-accent-blue
+                        via-accent-purple
+                        to-accent-purple-light
+            
+                        group-hover:from-accent-blue
+                        group-hover:via-accent-purple
+                        group-hover:to-accent-purple-dark
+            
+                        transition-all duration-300
+                    "
+                >
+                    SM.
+                </span>
             </a>
-            <!-- text-transparent -->
+ 
             <div id="nav-links" class="hidden sm:flex gap-8 text-sm text-text-secondary font-medium">
                 <!-- Use data-section for JS scroll spy -->
                 <a href="#about" data-section="about" class="nav-link relative hover:text-white transition duration-300">About</a>
@@ -530,6 +548,7 @@
 </body>
 
 </html>
+
 
 
 
