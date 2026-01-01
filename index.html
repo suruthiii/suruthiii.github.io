@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,11 +61,17 @@
 
     <style>
         /* Custom Scrollbar */
-        body::-webkit-scrollbar { width: 8px; }
-        body::-webkit-scrollbar-track { background: #050505; }
-        body::-webkit-scrollbar-thumb { 
-            background: linear-gradient(to bottom, #4C74F7, #A855F7); 
-            border-radius: 4px; 
+        body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #4C74F7, #A855F7);
+            border-radius: 4px;
         }
 
         /* Glassmorphism utility */
@@ -80,6 +87,7 @@
             color: white;
             font-weight: 600;
         }
+
         .nav-link.active::after {
             content: '';
             position: absolute;
@@ -97,42 +105,52 @@
             transform: translateY(30px);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
-        
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Mobile slider imitation for skills section */
         #skills-slider {
             -webkit-overflow-scrolling: touch;
-            scrollbar-width: none; /* Firefox */
+            scrollbar-width: none;
+            /* Firefox */
         }
+
         #skills-slider::-webkit-scrollbar {
-            display: none; /* Safari and Chrome */
+            display: none;
+            /* Safari and Chrome */
         }
     </style>
 </head>
 
-<body class="bg-bg-main text-text-primary font-sans antialiased selection:bg-accent-purple selection:text-white overflow-x-hidden">
+<body
+    class="bg-bg-main text-text-primary font-sans antialiased selection:bg-accent-purple selection:text-white overflow-x-hidden">
 
     <!-- Ambient Background Glows -->
     <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-accent-blue/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
-        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-accent-purple/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-accent-blue/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
+        <div
+            class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-accent-blue/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob">
+        </div>
+        <div
+            class="absolute top-[20%] right-[-10%] w-96 h-96 bg-accent-purple/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-accent-blue/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000">
+        </div>
     </div>
 
     <!-- Navbar - Enhanced Styling and Scroll Spy ready -->
-    <nav class="fixed top-0 w-full z-50 glass border-b border-white/5 transition-all duration-300 shadow-xl shadow-bg-main/50">
+    <nav
+        class="fixed top-0 w-full z-50 glass border-b border-white/5 transition-all duration-300 shadow-xl shadow-bg-main/50">
         <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
             <!-- Logo with Icon and Gradient -->
             <a href="#" class="font-bold text-2xl tracking-wider group relative flex items-center gap-2">
                 <i data-lucide="sparkles"
-                   class="w-5 h-5 text-accent-purple group-hover:rotate-12 transition-transform duration-300"></i>
-            
-                <span
-                    class="
+                    class="w-5 h-5 text-accent-purple group-hover:rotate-12 transition-transform duration-300"></i>
+
+                <span class="
                         bg-clip-text text-transparent
                         bg-gradient-to-r
                         from-accent-blue
@@ -144,18 +162,21 @@
                         group-hover:to-accent-purple-dark
             
                         transition-all duration-300
-                    "
-                >
+                    ">
                     SM.
                 </span>
             </a>
- 
+
             <div id="nav-links" class="hidden sm:flex gap-8 text-sm text-text-secondary font-medium">
                 <!-- Use data-section for JS scroll spy -->
-                <a href="#about" data-section="about" class="nav-link relative hover:text-white transition duration-300">About</a>
-                <a href="#experience" data-section="experience" class="nav-link relative hover:text-white transition duration-300">Experience</a>
-                <a href="#projects" data-section="projects" class="nav-link relative hover:text-white transition duration-300">Projects</a>
-                <a href="#contact" data-section="contact" class="nav-link relative hover:text-white transition duration-300">Contact</a>
+                <a href="#about" data-section="about"
+                    class="nav-link relative hover:text-white transition duration-300">About</a>
+                <a href="#experience" data-section="experience"
+                    class="nav-link relative hover:text-white transition duration-300">Experience</a>
+                <a href="#projects" data-section="projects"
+                    class="nav-link relative hover:text-white transition duration-300">Projects</a>
+                <a href="#contact" data-section="contact"
+                    class="nav-link relative hover:text-white transition duration-300">Contact</a>
             </div>
         </div>
     </nav>
@@ -165,33 +186,54 @@
         <!-- Hero Section -->
         <section class="min-h-screen flex flex-col justify-center pt-20 relative">
             <div class="reveal active delay-100">
-                <p class="text-accent-purple-light font-medium mb-6 tracking-widest uppercase text-sm flex items-center gap-3">
-                    <span class="w-10 h-[1px] bg-accent-purple"></span>
-                    Hi, I'm Suruthi Manivannan
-                </p>
-                
-                <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 leading-tight tracking-tight">
+                <!-- Top line -->
+                <div class="flex items-center text-accent-purple-light tracking-widest uppercase text-sm">
+                    <div class="h-[2px] bg-accent-purple mr-3 w-[60px]"></div>
+                    <div>HI, I'M SURUTHI MANIVANNAN</div>
+                </div>
+
+                <!-- Title -->
+                <h1
+                    class="mt-3 text-white font-bold text-[52px] sm:text-[72px] md:text-[96px] leading-[1.05] tracking-tight">
                     Building <br />
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light hover:brightness-110 transition-all duration-500">
+                    <span
+                        class="bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light inline-block text-transparent bg-clip-text">
                         Scalable
-                    </span> 
+                    </span>
                     Web Apps.
                 </h1>
 
-                <p class="max-w-xl text-text-secondary text-lg sm:text-xl leading-relaxed mb-10">
-                    Software Engineering Undergraduate at UCSC, passionate about Full Stack Development and Microservices architecture.
-                </p>
+                <!-- Subtitle -->
+                <div class="pt-6 text-text-secondary text-lg sm:text-xl">
+                    <div class="max-w-2xl">
+                        Computer Science Undergraduate at UCSC, passionate about Full Stack
+                        Development and Microservices architecture.
+                    </div>
+                </div>
 
-                <div class="flex flex-wrap gap-4">
-                    <a href="#contact" class="px-8 py-3.5 bg-gradient-to-r from-accent-blue to-accent-purple text-white rounded-xl transition-all duration-300 hover:shadow-glow-mixed hover:scale-105 font-semibold flex items-center gap-2">
-                        Contact Me <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <!-- Buttons -->
+                <div class="flex flex-wrap gap-4 mt-12 text-white font-medium">
+                    <!-- Contact -->
+                    <a href="#contact"
+                        class="px-7 py-4 rounded-2xl cursor-pointer border border-accent-purple/60 flex justify-between items-center transition-all duration-200 w-[190px] hover:w-[195px] hover:border-accent-purple hover:shadow-glow-purple">
+                        <span class="tracking-wide">CONTACT ME</span>
+                        <span class="scale-90">
+                            <i data-lucide="user" class="w-5 h-5"></i>
+                        </span>
                     </a>
-                    <a href="Suruthi_Manivannan.pdf" download class="px-8 py-3.5 border border-white/10 hover:border-accent-purple/50 bg-white/5 hover:bg-white/10 text-white rounded-xl transition-all duration-300 font-semibold backdrop-blur-sm">
-                        Resume
+
+                    <!-- Resume -->
+                    <a href="Suruthi_Manivannan.pdf" download
+                        class="bg-gradient-to-r from-accent-blue to-accent-purple px-7 py-4 rounded-2xl cursor-pointer flex justify-between items-center transition-all duration-200 w-[180px] hover:w-[186px] hover:shadow-glow-mixed">
+                        <span class="tracking-wide">MY RESUME</span>
+                        <span class="scale-90">
+                            <i data-lucide="arrow-down-to-line" class="w-5 h-5"></i>
+                        </span>
                     </a>
                 </div>
+
             </div>
-            
+
             <!-- Decorative Scroll indicator -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
                 <i data-lucide="chevrons-down" class="w-6 h-6 text-text-secondary"></i>
@@ -203,13 +245,16 @@
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="reveal">
                     <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                        <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span> 
+                        <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span>
                         About Me
                     </h2>
                     <p class="text-text-secondary leading-relaxed mb-6 text-lg">
-                        A 3rd-year Computer Science student at UCSC (GPA 3.52/4.00) with a strong interest in full-stack engineering. I specialize in blending user-focused front-end design with robust, scalable backend systems.
+                        A Computer Science student at UCSC (GPA 3.52/4.00) with a strong interest in full-stack
+                        engineering. I specialize in blending user-focused front-end design with robust, scalable
+                        backend systems.
                     </p>
-                    <div class="p-4 bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 border-l-4 border-accent-purple rounded-r-lg">
+                    <div
+                        class="p-4 bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 border-l-4 border-accent-purple rounded-r-lg">
                         <p class="text-gray-300 italic">
                             "Strong focus on Microservices, Spring Boot, Node.js, and cloud-native development."
                         </p>
@@ -217,26 +262,37 @@
                 </div>
 
                 <div class="reveal delay-200">
-                    <div class="glass p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group hover:border-accent-purple/30 transition-all duration-500">
+                    <div
+                        class="glass p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group hover:border-accent-purple/30 transition-all duration-500">
                         <!-- Glow effect on hover -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+
                         <div class="relative z-10">
-                            <h3 class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-accent-blue-light to-accent-purple-light">Education</h3>
-                            
+                            <h3
+                                class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-accent-blue-light to-accent-purple-light">
+                                Education</h3>
+
                             <div class="space-y-8">
                                 <div class="relative pl-6 border-l border-white/10">
-                                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-purple shadow-glow-purple"></div>
+                                    <div
+                                        class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-purple shadow-glow-purple">
+                                    </div>
                                     <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
                                         <span class="text-sm font-mono text-accent-blue-light">2022 - Present</span>
-                                        <span class="text-xs font-bold bg-accent-purple/20 text-accent-purple px-2 py-1 rounded">GPA: 3.52</span>
+                                        <span
+                                            class="text-xs font-bold bg-accent-purple/20 text-accent-purple px-2 py-1 rounded">GPA:
+                                            3.52</span>
                                     </div>
                                     <p class="font-semibold text-lg text-white">B.Sc. (Hons) in Computer Science</p>
-                                    <p class="text-sm text-text-secondary">University of Colombo School of Computing (UCSC)</p>
+                                    <p class="text-sm text-text-secondary">University of Colombo School of Computing
+                                        (UCSC)</p>
                                 </div>
-                                
+
                                 <div class="relative pl-6 border-l border-white/10">
-                                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-blue"></div>
+                                    <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-blue">
+                                    </div>
                                     <p class="font-semibold text-lg text-white">Physical Science Stream</p>
                                     <p class="text-sm text-text-secondary">Hindu Ladies' College (2007 - 2020)</p>
                                 </div>
@@ -250,16 +306,19 @@
         <!-- Experience Section -->
         <section id="experience" class="py-24">
             <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"></span> 
+                <span class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"></span>
                 Experience
             </h2>
 
             <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
                 <!-- Glowing Node -->
-                <span class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.6)]"></span>
+                <span
+                    class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.6)]"></span>
 
-                <div class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-purple/30 transition-all duration-300 hover:transform hover:translate-x-2">
-                    <span class="inline-block px-3 py-1 mb-3 text-xs font-mono font-medium text-accent-purple-light bg-accent-purple/10 rounded-full border border-accent-purple/20">
+                <div
+                    class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-purple/30 transition-all duration-300 hover:transform hover:translate-x-2">
+                    <span
+                        class="inline-block px-3 py-1 mb-3 text-xs font-mono font-medium text-accent-purple-light bg-accent-purple/10 rounded-full border border-accent-purple/20">
                         Nov 2024 – May 2025
                     </span>
                     <h3 class="text-2xl font-bold text-white mb-1">Software Engineer Intern</h3>
@@ -267,7 +326,9 @@
                         <i data-lucide="briefcase" class="w-4 h-4"></i> X-Venture Global Solutions
                     </p>
                     <p class="text-text-secondary leading-relaxed max-w-3xl">
-                        Worked on core enterprise applications in an agile environment with emphasis on clean code, REST services, and backend engineering. Collaborated with senior engineers to optimize microservice communication.
+                        Worked on core enterprise applications in an agile environment with emphasis on clean code, REST
+                        services, and backend engineering. Collaborated with senior engineers to optimize microservice
+                        communication.
                     </p>
                 </div>
             </div>
@@ -277,11 +338,11 @@
         <section id="skills" class="py-16">
             <div class="reveal">
                 <h2 class="text-3xl font-bold mb-10 text-center flex items-center justify-center gap-3">
-                    <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span> 
+                    <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span>
                     Core Tech Stack
-                    <span class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"></span> 
+                    <span class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"></span>
                 </h2>
-                
+
                 <!-- Card Slider Wrapper (Horizontal scroll on mobile) -->
                 <div id="skills-slider" class="flex overflow-x-auto gap-4 p-4 lg:grid lg:grid-cols-5 lg:gap-6">
                     <!-- Cards will be populated here by JavaScript -->
@@ -292,83 +353,120 @@
         <!-- Projects Section -->
         <section id="projects" class="py-24">
             <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
-                <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span> 
+                <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span>
                 Featured Projects
             </h2>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Project Card 1 -->
-                <div class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-300">
+                <div
+                    class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-300">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
+                        <div
+                            class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
                             <i data-lucide="brain-circuit" class="w-6 h-6"></i>
                         </div>
-                        <a href="https://github.com/CoMind-org" class="text-text-secondary hover:text-white transition-colors">
+                        <a href="https://github.com/CoMind-org"
+                            class="text-text-secondary hover:text-white transition-colors">
                             <i data-lucide="github" class="w-5 h-5"></i>
                         </a>
                     </div>
-                
-                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">
+
+                    <h3
+                        class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">
                         CoMind
                     </h3>
-                
+
                     <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
-                        An AI-powered platform that automates backend creation using a collaborative agent-based approach. It leverages LangChain and LangGraph to coordinate multiple intelligent agents that plan, design, and decompose backend systems from natural language inputs.
+                        An AI-powered platform that automatically builds backends from natural language using
+                        collaborative intelligent agents, coordinated through LangChain and LangGraph.
                     </p>
-                    
+
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">LangChain</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">LangGraph</span>
-                        <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Groq LLMs</span>
-                        <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">FastAPI</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">TypeScript</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Vite</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Git</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">LangChain</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">LangGraph</span>
+                        <span
+                            class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Groq
+                            LLMs (GPT-4.0)</span>
+                        <span
+                            class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">FastAPI</span>
+                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React
+                            (TS + Vite)</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">TypeScript</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Vite</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Git</span>
                     </div>
                 </div>
 
 
                 <!-- Project Card 2 -->
-                <div class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full">
+                <div
+                    class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
+                        <div
+                            class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
                             <i data-lucide="coffee" class="w-6 h-6"></i>
                         </div>
-                        <a href="https://github.com/La-Fresca" target="_blank" class="text-text-secondary hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        <a href="https://github.com/La-Fresca" target="_blank"
+                            class="text-text-secondary hover:text-white transition-colors"><i data-lucide="github"
+                                class="w-5 h-5"></i></a>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">La Fresca</h3>
+                    <h3
+                        class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">
+                        La Fresca</h3>
                     <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
-                        Full-stack cafe management system. Features automated inventory tracking and Python-based sales prediction models.
+                        A cafe management system for a growing cafe chain, streamlining orders, inventory, and
+                        operations using a Spring Boot backend, React frontend, and a Python-based stock prediction
+                        model.
                     </p>
-                    
+
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">SpringBoot</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React</span>
-                        <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Sprin
+                            gBoot</span>
+                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React
+                            (TS + Vite)</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">MongoDB</span>
+                        <span
+                            class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Python
+                            (Models)</span>
                     </div>
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-blue group flex flex-col h-full delay-100">
+                <div
+                    class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-blue group flex flex-col h-full delay-100">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-accent-blue/10 rounded-lg text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300">
+                        <div
+                            class="p-3 bg-accent-blue/10 rounded-lg text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300">
                             <i data-lucide="users" class="w-6 h-6"></i>
                         </div>
-                        <a href="https://github.com/Sri-Care-Services" class="text-text-secondary hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        <a href="https://github.com/Sri-Care-Services"
+                            class="text-text-secondary hover:text-white transition-colors"><i data-lucide="github"
+                                class="w-5 h-5"></i></a>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-blue-light transition-colors">Sri Care</h3>
+                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-blue-light transition-colors">
+                        Sri Care</h3>
                     <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
-                        Scalable customer care platform built using Microservices architecture for high availability and fault tolerance.
+                        A customer care application built with a microservices architecture to efficiently manage user
+                        accounts, billing, and service coordination through scalable, well-defined APIs.
                     </p>
-                    
+
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Microservices</span>
-                        <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Node.js</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">SpringBoot</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Microservices</span>
+                        <span
+                            class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Node.js</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">SpringBoot</span>
                     </div>
                 </div>
 
@@ -393,32 +491,44 @@
                     </div>
                 </div> -->
 
-                <div class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-200">
+                <div
+                    class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-200">
                     <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
+                        <div
+                            class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
                             <i data-lucide="heart-handshake" class="w-6 h-6"></i>
                         </div>
-                        <a href="https://github.com/suruthiii/kindheart" class="text-text-secondary hover:text-white transition-colors">
+                        <a href="https://github.com/suruthiii/kindheart"
+                            class="text-text-secondary hover:text-white transition-colors">
                             <i data-lucide="github" class="w-5 h-5"></i>
                         </a>
                     </div>
-                
-                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">
+
+                    <h3
+                        class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">
                         KindHeart
                     </h3>
-                
+
                     <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
-                        A web-based charity funding system supporting Sri Lankan students by securely connecting donors and beneficiaries, built using an MVC architecture with a MySQL backend.
+                        A web-based charity funding system supporting Sri Lankan students by securely connecting donors
+                        and beneficiaries, built using an MVC architecture with a MySQL backend.
                     </p>
-                    
+
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">HTML</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">CSS</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">JavaScript</span>
-                        <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">PHP</span>
-                        <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">MySQL</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Figma</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Git</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">HTML</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">CSS</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">JavaScript</span>
+                        <span
+                            class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">PHP</span>
+                        <span
+                            class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">MySQL</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Figma</span>
+                        <span
+                            class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Git</span>
                     </div>
                 </div>
 
@@ -430,32 +540,43 @@
         <section id="contact" class="py-24 text-center reveal">
             <div class="glass max-w-3xl mx-auto p-12 rounded-3xl border border-white/10 relative overflow-hidden">
                 <!-- Background Gradient Burst -->
-                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-accent-purple/10 to-transparent pointer-events-none"></div>
+                <div
+                    class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-accent-purple/10 to-transparent pointer-events-none">
+                </div>
 
                 <h2 class="text-4xl sm:text-5xl font-bold mb-6 relative z-10">Let's Connect</h2>
                 <p class="text-text-secondary mb-10 max-w-lg mx-auto text-lg relative z-10">
-                    I'm actively looking for a software engineer role. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    I'm actively looking for a software engineer role. Whether you have a question or just want to say
+                    hi, I'll try my best to get back to you!
                 </p>
 
-                <a href="mailto:suruthi0611@gmail.com" class="relative z-10 inline-block px-10 py-4 bg-gradient-to-r from-accent-blue to-accent-purple text-white rounded-xl hover:shadow-glow-mixed hover:scale-105 transition-all duration-300 font-bold shadow-lg">
+                <a href="mailto:suruthi0611@gmail.com"
+                    class="relative z-10 inline-block px-10 py-4 bg-gradient-to-r from-accent-blue to-accent-purple text-white rounded-xl hover:shadow-glow-mixed hover:scale-105 transition-all duration-300 font-bold shadow-lg">
                     suruthi0611@gmail.com
                 </a>
 
                 <div class="flex justify-center gap-8 mt-12 relative z-10">
-                    <a href="https://github.com/suruthiii" class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
-                        <i data-lucide="github" class="w-6 h-6 text-text-secondary group-hover:text-accent-purple transition-colors"></i>
+                    <a href="https://github.com/suruthiii"
+                        class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
+                        <i data-lucide="github"
+                            class="w-6 h-6 text-text-secondary group-hover:text-accent-purple transition-colors"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/suruthi-manivannan/" class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
-                        <i data-lucide="linkedin" class="w-6 h-6 text-text-secondary group-hover:text-accent-blue transition-colors"></i>
+                    <a href="https://www.linkedin.com/in/suruthi-manivannan/"
+                        class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
+                        <i data-lucide="linkedin"
+                            class="w-6 h-6 text-text-secondary group-hover:text-accent-blue transition-colors"></i>
                     </a>
-                    <a href="Suruthi_Manivannan.pdf" download class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
-                        <i data-lucide="file-text" class="w-6 h-6 text-text-secondary group-hover:text-white transition-colors"></i>
+                    <a href="Suruthi_Manivannan.pdf" download
+                        class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
+                        <i data-lucide="file-text"
+                            class="w-6 h-6 text-text-secondary group-hover:text-white transition-colors"></i>
                     </a>
                 </div>
             </div>
 
             <p class="text-xs text-text-secondary mt-16 opacity-50">
-                © 2025 Suruthi Manivannan. Built with <span class="text-accent-purple animate-pulse">💜</span> & Tailwind CSS.
+                © 2025 Suruthi Manivannan. Built with <span class="text-accent-purple animate-pulse">💜</span> &
+                Tailwind CSS.
             </p>
         </section>
 
@@ -469,11 +590,11 @@
             { name: 'Python', icon: 'code', colorClass: 'bg-accent-purple/10 text-accent-purple', borderClass: 'border-accent-purple/50' },
             { name: 'Node.js', icon: 'zap', colorClass: 'bg-accent-purple/10 text-accent-purple', borderClass: 'border-accent-purple/50' },
             { name: 'Microservices', icon: 'share-2', colorClass: 'bg-accent-purple/10 text-accent-purple', borderClass: 'border-accent-purple/50' },
-            
+
             { name: 'React', icon: 'atom', colorClass: 'bg-accent-blue/10 text-accent-blue', borderClass: 'border-accent-blue/50' },
             { name: 'TypeScript', icon: 'type', colorClass: 'bg-accent-blue/10 text-accent-blue', borderClass: 'border-accent-blue/50' },
             { name: 'Tailwind CSS', icon: 'wind', colorClass: 'bg-accent-blue/10 text-accent-blue', borderClass: 'border-accent-blue/50' },
-            
+
             { name: 'MySQL', icon: 'database', colorClass: 'bg-white/5 text-gray-300', borderClass: 'border-white/20' },
             { name: 'AWS', icon: 'cloud', colorClass: 'bg-white/5 text-gray-300', borderClass: 'border-white/20' },
             { name: 'Git', icon: 'git-branch', colorClass: 'bg-white/5 text-gray-300', borderClass: 'border-white/20' },
@@ -536,10 +657,10 @@
         window.onload = function () {
             // Render skills
             renderSkillCards();
-            
+
             // Set up scroll listeners
             window.addEventListener('scroll', revealOnScroll);
-            
+
             // Trigger once on load
             revealOnScroll();
         };
@@ -548,7 +669,3 @@
 </body>
 
 </html>
-
-
-
-
