@@ -5,19 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Suruthi Manivannan | Portfolio</title>
 
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Tailwind Config -->
     <script>
       tailwind.config = {
         theme: {
@@ -27,9 +22,9 @@
               "bg-card": "#0A0A12",
               "accent-blue": "#4C74F7",
               "accent-blue-light": "#7C9CFF",
-              "accent-purple": "#A855F7" /* Added Purple */,
-              "accent-purple-light": "#C084FC" /* Added Light Purple */,
-              "text-primary": "#F3F4FF" /* Slightly adjusted for contrast */,
+              "accent-purple": "#A855F7",
+              "accent-purple-light": "#C084FC",
+              "text-primary": "#F3F4FF",
               "text-secondary": "#9CA3AF",
             },
             fontFamily: {
@@ -62,7 +57,6 @@
     </script>
 
     <style>
-      /* Custom Scrollbar */
       body::-webkit-scrollbar {
         width: 8px;
       }
@@ -76,7 +70,6 @@
         border-radius: 4px;
       }
 
-      /* Glassmorphism utility */
       .glass {
         background: rgba(15, 15, 26, 0.6);
         backdrop-filter: blur(12px);
@@ -84,7 +77,6 @@
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
 
-      /* Nav Link Active Indicator */
       .nav-link.active {
         color: white;
         font-weight: 600;
@@ -101,7 +93,6 @@
         border-radius: 1px;
       }
 
-      /* Animation Utility Classes (controlled by JS) */
       .reveal {
         opacity: 0;
         transform: translateY(30px);
@@ -113,16 +104,13 @@
         transform: translateY(0);
       }
 
-      /* Mobile slider imitation for skills section */
       #skills-slider {
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
-        /* Firefox */
       }
 
       #skills-slider::-webkit-scrollbar {
         display: none;
-        /* Safari and Chrome */
       }
     </style>
   </head>
@@ -130,7 +118,6 @@
   <body
     class="bg-bg-main text-text-primary font-sans antialiased selection:bg-accent-purple selection:text-white overflow-x-hidden"
   >
-    <!-- Ambient Background Glows -->
     <div
       class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none"
     >
@@ -145,14 +132,12 @@
       ></div>
     </div>
 
-    <!-- Navbar - Enhanced Styling and Scroll Spy ready -->
     <nav
       class="fixed top-0 w-full z-50 glass border-b border-white/5 transition-all duration-300 shadow-xl shadow-bg-main/50"
     >
       <div
         class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center"
       >
-        <!-- Logo with Icon and Gradient -->
         <a
           href="#"
           class="font-bold text-2xl tracking-wider group relative flex items-center gap-2"
@@ -163,7 +148,7 @@
           ></i>
 
           <span
-            class="bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light group-hover:from-accent-blue group-hover:via-accent-purple group-hover:to-accent-purple-dark transition-all duration-300"
+            class="bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light group-hover:from-accent-blue group-hover:via-accent-purple group-hover:to-accent-purple-light transition-all duration-300"
           >
             SM.
           </span>
@@ -171,9 +156,8 @@
 
         <div
           id="nav-links"
-          class="hidden sm:flex gap-8 text-sm text-text-secondary font-medium"
+          class="hidden sm:flex gap-7 text-sm text-text-secondary font-medium"
         >
-          <!-- Use data-section for JS scroll spy -->
           <a
             href="#about"
             data-section="about"
@@ -193,6 +177,18 @@
             >Projects</a
           >
           <a
+            href="#certifications"
+            data-section="certifications"
+            class="nav-link relative hover:text-white transition duration-300"
+            >Certifications</a
+          >
+          <a
+            href="#volunteering"
+            data-section="volunteering"
+            class="nav-link relative hover:text-white transition duration-300"
+            >Volunteering</a
+          >
+          <a
             href="#contact"
             data-section="contact"
             class="nav-link relative hover:text-white transition duration-300"
@@ -203,10 +199,8 @@
     </nav>
 
     <main class="max-w-5xl mx-auto px-6 relative">
-      <!-- Hero Section -->
       <section class="min-h-screen flex flex-col justify-center pt-20 relative">
         <div class="reveal active delay-100">
-          <!-- Top line -->
           <div
             class="flex items-center text-accent-purple-light tracking-widest uppercase text-sm"
           >
@@ -214,33 +208,27 @@
             <div>HEY THERE!</div>
           </div>
 
-          <!-- Title -->
           <h1
             class="mt-3 text-white font-bold text-[52px] sm:text-[72px] md:text-[96px] leading-[1.20] tracking-tight"
           >
-            <!-- <span class="text-[42px] sm:text-[62px] md:text-[82px]"> -->
-              I'm
-              <span
-                class="bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light inline-block text-transparent bg-clip-text"
-              >
-                Suruthi,
-              </span>
-            <!-- </span> -->
+            I'm
+            <span
+              class="bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light inline-block text-transparent bg-clip-text"
+            >
+              Suruthi,
+            </span>
             <br />
             Software Engineer
           </h1>
 
-          <!-- Subtitle -->
           <div class="pt-6 text-text-secondary text-lg sm:text-xl">
             <div class="max-w-2xl">
-              Passionate about solving real challenges with clean, reliable code and
-              thoughtfully designed systems
+              Passionate about solving real challenges with clean, reliable code
+              and thoughtfully designed systems
             </div>
           </div>
 
-          <!-- Buttons -->
           <div class="flex flex-wrap gap-4 mt-12 text-white font-medium">
-            <!-- Contact -->
             <a
               href="#contact"
               class="px-7 py-4 rounded-2xl cursor-pointer border border-accent-purple/60 flex justify-between items-center transition-all duration-200 w-[190px] hover:w-[195px] hover:border-accent-purple hover:shadow-glow-purple"
@@ -251,7 +239,6 @@
               </span>
             </a>
 
-            <!-- Resume -->
             <a
               href="Suruthi_Manivannan.pdf"
               download
@@ -265,7 +252,6 @@
           </div>
         </div>
 
-        <!-- Decorative Scroll indicator -->
         <div
           class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50"
         >
@@ -276,7 +262,6 @@
         </div>
       </section>
 
-      <!-- About Section -->
       <section id="about" class="py-24">
         <div class="grid md:grid-cols-2 gap-16 items-center">
           <div class="reveal">
@@ -291,7 +276,7 @@
               of Colombo School of Computing (UCSC) with a strong interest in
               backend-oriented web development. I enjoy turning ideas into
               working systems and bridging the gap between frontend needs and
-              backend reliability.
+              backend reliability.
             </p>
             <div
               class="p-4 bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 border-l-4 border-accent-purple rounded-r-lg"
@@ -307,7 +292,6 @@
             <div
               class="glass p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group hover:border-accent-purple/30 transition-all duration-500"
             >
-              <!-- Glow effect on hover -->
               <div
                 class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
               ></div>
@@ -357,9 +341,7 @@
                     <p class="font-semibold text-lg text-white">
                       Physical Science Stream
                     </p>
-                    <p class="text-sm text-text-secondary">
-                      Hindu Ladies' College
-                    </p>
+                    <p class="text-sm text-text-secondary">Hindu Ladies' College</p>
                   </div>
                 </div>
               </div>
@@ -368,7 +350,6 @@
         </div>
       </section>
 
-      <!-- Experience Section -->
       <section id="experience" class="py-24">
         <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
           <span
@@ -378,7 +359,6 @@
         </h2>
 
         <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
-          <!-- Glowing Node -->
           <span
             class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.6)]"
           ></span>
@@ -455,7 +435,6 @@
         </div>
       </section>
 
-      <!-- Skills Section - Now Interactive Cards -->
       <section id="skills" class="py-16">
         <div class="reveal">
           <h2
@@ -470,17 +449,13 @@
             ></span>
           </h2>
 
-          <!-- Card Slider Wrapper (Horizontal scroll on mobile) -->
           <div
             id="skills-slider"
             class="flex overflow-x-auto gap-4 p-4 lg:grid lg:grid-cols-5 lg:gap-6"
-          >
-            <!-- Cards will be populated here by JavaScript -->
-          </div>
+          ></div>
         </div>
       </section>
 
-      <!-- Projects Section -->
       <section id="projects" class="py-24">
         <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
           <span
@@ -490,7 +465,6 @@
         </h2>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project Card 1 -->
           <div
             class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-300"
           >
@@ -554,7 +528,6 @@
             </div>
           </div>
 
-          <!-- Project Card 2 -->
           <div
             class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full"
           >
@@ -604,16 +577,15 @@
               >
               <span
                 class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Swagger
-              </span>
+                >Swagger</span
+              >
               <span
                 class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Git
-              </span>
+                >Git</span
+              >
             </div>
           </div>
 
-          <!-- Project Card 3 -->
           <div
             class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-blue group flex flex-col h-full delay-100"
           >
@@ -662,43 +634,22 @@
               >
               <span
                 class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Node.js
-              </span>
+                >Node.js</span
+              >
               <span
                 class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >MySQL
-              </span>
+                >MySQL</span
+              >
               <span
                 class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Swagger
-              </span>
+                >Swagger</span
+              >
               <span
                 class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Git
-              </span>
+                >Git</span
+              >
             </div>
           </div>
-
-          <!-- Project Card 4 -->
-          <!-- <div class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-200">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
-                            <i data-lucide="book-open" class="w-6 h-6"></i>
-                        </div>
-                        <a href="#" class="text-text-secondary hover:text-white transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">LMS</h3>
-                    <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
-                        Modern Learning Management System using the MERN stack with a custom UI designed in Figma.
-                    </p>
-                    
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">MERN</span>
-                        <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React</span>
-                        <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">MongoDB</span>
-                    </div>
-                </div> -->
 
           <div
             class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-200"
@@ -758,23 +709,265 @@
               >
               <span
                 class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Swagger
-              </span>
+                >Swagger</span
+              >
               <span
                 class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Git
-              </span>
+                >Git</span
+              >
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
+      <section id="certifications" class="py-24">
+        <div class="reveal">
+          <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+            <span
+              class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"
+            ></span>
+            Certifications
+          </h2>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-purple/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group"
+            >
+              <div class="flex items-start justify-between mb-6">
+                <div
+                  class="p-3 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors"
+                >
+                  <i data-lucide="badge-check" class="w-6 h-6"></i>
+                </div>
+                <span
+                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 border border-accent-purple/20 px-2 py-1 rounded-full"
+                  >2025</span
+                >
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">
+                Introduction to Containers w/ Docker, Kubernetes & OpenShift
+              </h3>
+              <p class="text-sm text-text-secondary">IBM</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span
+                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
+                  >Docker</span
+                >
+                <span
+                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
+                  >Kubernetes</span
+                >
+                <span
+                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
+                  >OpenShift</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-mixed group"
+            >
+              <div class="flex items-start justify-between mb-6">
+                <div
+                  class="p-3 rounded-xl bg-accent-blue/10 text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors"
+                >
+                  <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <span
+                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 border border-accent-blue/20 px-2 py-1 rounded-full"
+                  >2025</span
+                >
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">
+                Postman API Fundamentals Student Expert
+              </h3>
+              <p class="text-sm text-text-secondary">Postman Academy</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span
+                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
+                  >APIs</span
+                >
+                <span
+                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
+                  >Postman</span
+                >
+                <span
+                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
+                  >Testing</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-purple/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group"
+            >
+              <div class="flex items-start justify-between mb-6">
+                <div
+                  class="p-3 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors"
+                >
+                  <i data-lucide="cloud" class="w-6 h-6"></i>
+                </div>
+                <span
+                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 border border-accent-purple/20 px-2 py-1 rounded-full"
+                  >2023</span
+                >
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">
+                AWS Educate Introduction to Cloud 101
+              </h3>
+              <p class="text-sm text-text-secondary">Amazon Web Services (AWS)</p>
+              <div class="mt-5 flex flex-wrap gap-2">
+                <span
+                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
+                  >Cloud</span
+                >
+                <span
+                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
+                  >AWS</span
+                >
+                <span
+                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
+                  >Foundations</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="volunteering" class="py-24">
+        <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
+          <span
+            class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"
+          ></span>
+          Volunteering
+        </h2>
+
+        <div class="space-y-8">
+          <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
+            <span
+              class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-blue shadow-[0_0_10px_rgba(76,116,247,0.55)]"
+            ></span>
+
+            <div
+              class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all duration-300 hover:transform hover:translate-x-2"
+            >
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="p-2.5 rounded-xl bg-accent-blue/10 text-accent-blue"
+                  >
+                    <i data-lucide="users-round" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-white">
+                    IEEE WIE Student Branch Affinity Group of UCSC
+                  </h3>
+                </div>
+                <span
+                  class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-blue-light bg-accent-blue/10 rounded-full border border-accent-blue/20"
+                  >2024 – 2025</span
+                >
+              </div>
+
+              <ul class="text-text-secondary leading-relaxed space-y-2">
+                <li class="flex gap-2">
+                  <span class="text-accent-purple-light">•</span>
+                  <span>Secretary — Executive Committee</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent-purple-light">•</span>
+                  <span>Organizing Committee Member — Content — Hackaholics 6.0</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
+            <span
+              class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.55)]"
+            ></span>
+
+            <div
+              class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-purple/30 transition-all duration-300 hover:transform hover:translate-x-2"
+            >
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="p-2.5 rounded-xl bg-accent-purple/10 text-accent-purple"
+                  >
+                    <i data-lucide="layout-template" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-white">
+                    ACM Student Chapter of UCSC
+                  </h3>
+                </div>
+                <span
+                  class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-purple-light bg-accent-purple/10 rounded-full border border-accent-purple/20"
+                  >2023 – 2024</span
+                >
+              </div>
+
+              <ul class="text-text-secondary leading-relaxed space-y-2">
+                <li class="flex gap-2">
+                  <span class="text-accent-blue-light">•</span>
+                  <span>Committee Member — Content</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent-blue-light">•</span>
+                  <span>Organizing Committee Member — Program — Introductory Session 2023</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
+            <span
+              class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-blue shadow-[0_0_10px_rgba(76,116,247,0.55)]"
+            ></span>
+
+            <div
+              class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all duration-300 hover:transform hover:translate-x-2"
+            >
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="p-2.5 rounded-xl bg-accent-blue/10 text-accent-blue"
+                  >
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-white">
+                    IEEE Student Branch of UCSC
+                  </h3>
+                </div>
+                <span
+                  class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-blue-light bg-accent-blue/10 rounded-full border border-accent-blue/20"
+                  >2022 – 2023</span
+                >
+              </div>
+
+              <ul class="text-text-secondary leading-relaxed space-y-2">
+                <li class="flex gap-2">
+                  <span class="text-accent-purple-light">•</span>
+                  <span>Committee Member — Web</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent-purple-light">•</span>
+                  <span>Organizing Committee Member — Content — Codyssey</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent-purple-light">•</span>
+                  <span>Organizing Committee Member — Content — IEEE Day ’22</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="py-24 text-center reveal">
         <div
           class="glass max-w-3xl mx-auto p-12 rounded-3xl border border-white/10 relative overflow-hidden"
         >
-          <!-- Background Gradient Burst -->
           <div
             class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-accent-purple/10 to-transparent pointer-events-none"
           ></div>
@@ -836,7 +1029,6 @@
     </main>
 
     <script>
-      // Tech Stack Data for dynamic rendering
       const techStack = [
         {
           name: "Java",
@@ -868,7 +1060,6 @@
           colorClass: "bg-accent-purple/10 text-accent-purple",
           borderClass: "border-accent-purple/50",
         },
-
         {
           name: "TypeScript",
           icon: "type",
@@ -887,7 +1078,6 @@
           colorClass: "bg-accent-blue/10 text-accent-blue",
           borderClass: "border-accent-blue/50",
         },
-
         {
           name: "MySQL",
           icon: "database",
@@ -914,7 +1104,6 @@
         },
       ];
 
-      // Function to render skill cards
       const renderSkillCards = () => {
         const container = document.getElementById("skills-slider");
         if (!container) return;
@@ -942,16 +1131,14 @@
           )
           .join("");
 
-        // Re-initialize Lucide icons after adding new HTML
         lucide.createIcons();
       };
 
-      // Scroll Reveal Animation Script
       const revealElements = document.querySelectorAll(".reveal");
 
       const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
-        const elementVisible = 150; // Reveal element sooner
+        const elementVisible = 150;
 
         revealElements.forEach((reveal) => {
           const elementTop = reveal.getBoundingClientRect().top;
@@ -960,12 +1147,11 @@
           }
         });
 
-        // Scroll Spy Logic for Navbar
         const sections = document.querySelectorAll("main section");
         let currentSection = "";
 
         sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 100; // Offset for fixed nav
+          const sectionTop = section.offsetTop - 100;
           const sectionHeight = section.clientHeight;
           if (
             window.scrollY >= sectionTop &&
@@ -983,16 +1169,11 @@
         });
       };
 
-      // Main setup function
       window.onload = function () {
-        // Render skills
         renderSkillCards();
-
-        // Set up scroll listeners
         window.addEventListener("scroll", revealOnScroll);
-
-        // Trigger once on load
         revealOnScroll();
+        lucide.createIcons();
       };
     </script>
   </body>
