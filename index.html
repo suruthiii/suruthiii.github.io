@@ -1,148 +1,140 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suruthi Manivannan</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/logo6.png" type="image/png">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <title>Suruthi Manivannan</title>
 
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "bg-main": "#050505",
-              "bg-card": "#0A0A12",
-              "accent-blue": "#4C74F7",
-              "accent-blue-light": "#7C9CFF",
-              "accent-purple": "#A855F7",
-              "accent-purple-light": "#C084FC",
-              "text-primary": "#F3F4FF",
-              "text-secondary": "#9CA3AF",
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "bg-main": "#050505",
+            "bg-card": "#0A0A12",
+            "accent-blue": "#4C74F7",
+            "accent-blue-light": "#7C9CFF",
+            "accent-purple": "#A855F7",
+            "accent-purple-light": "#C084FC",
+            "text-primary": "#F3F4FF",
+            "text-secondary": "#9CA3AF",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          boxShadow: {
+            "glow-blue": "0 0 20px rgba(76,116,247,0.3)",
+            "glow-purple": "0 0 20px rgba(168,85,247,0.3)",
+            "glow-mixed": "0 0 25px rgba(124, 58, 237, 0.25)",
+          },
+          animation: {
+            blob: "blob 7s infinite",
+            float: "float 6s ease-in-out infinite",
+          },
+          keyframes: {
+            blob: {
+              "0%": { transform: "translate(0px, 0px) scale(1)" },
+              "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+              "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+              "100%": { transform: "translate(0px, 0px) scale(1)" },
             },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-            },
-            boxShadow: {
-              "glow-blue": "0 0 20px rgba(76,116,247,0.3)",
-              "glow-purple": "0 0 20px rgba(168,85,247,0.3)",
-              "glow-mixed": "0 0 25px rgba(124, 58, 237, 0.25)",
-            },
-            animation: {
-              blob: "blob 7s infinite",
-              float: "float 6s ease-in-out infinite",
-            },
-            keyframes: {
-              blob: {
-                "0%": { transform: "translate(0px, 0px) scale(1)" },
-                "33%": { transform: "translate(30px, -50px) scale(1.1)" },
-                "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
-                "100%": { transform: "translate(0px, 0px) scale(1)" },
-              },
-              float: {
-                "0%, 100%": { transform: "translateY(0)" },
-                "50%": { transform: "translateY(-10px)" },
-              },
+            float: {
+              "0%, 100%": { transform: "translateY(0)" },
+              "50%": { transform: "translateY(-10px)" },
             },
           },
         },
-      };
-    </script>
+      },
+    };
+  </script>
 
-    <style>
-      body::-webkit-scrollbar {
-        width: 8px;
-      }
+  <style>
+    body::-webkit-scrollbar {
+      width: 8px;
+    }
 
-      body::-webkit-scrollbar-track {
-        background: #050505;
-      }
+    body::-webkit-scrollbar-track {
+      background: #050505;
+    }
 
-      body::-webkit-scrollbar-thumb {
-        background: linear-gradient(to bottom, #4c74f7, #a855f7);
-        border-radius: 4px;
-      }
+    body::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #4c74f7, #a855f7);
+      border-radius: 4px;
+    }
 
-      .glass {
-        background: rgba(15, 15, 26, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-      }
+    .glass {
+      background: rgba(15, 15, 26, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
 
-      .nav-link.active {
-        color: white;
-        font-weight: 600;
-      }
+    .nav-link.active {
+      color: white;
+      font-weight: 600;
+    }
 
-      .nav-link.active::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(to right, #4c74f7, #a855f7);
-        border-radius: 1px;
-      }
+    .nav-link.active::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #4c74f7, #a855f7);
+      border-radius: 1px;
+    }
 
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-      }
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    }
 
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-      #skills-slider {
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-      }
+    #skills-slider {
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
 
-      #skills-slider::-webkit-scrollbar {
-        display: none;
-      }
-    </style>
-  </head>
+    #skills-slider::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
 
-  <body
-    class="bg-bg-main text-text-primary font-sans antialiased selection:bg-accent-purple selection:text-white overflow-x-hidden"
-  >
+<body
+  class="bg-bg-main text-text-primary font-sans antialiased selection:bg-accent-purple selection:text-white overflow-x-hidden">
+  <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
     <div
-      class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none"
-    >
-      <div
-        class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-accent-blue/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"
-      ></div>
-      <div
-        class="absolute top-[20%] right-[-10%] w-96 h-96 bg-accent-purple/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"
-      ></div>
-      <div
-        class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-accent-blue/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"
-      ></div>
+      class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-accent-blue/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob">
     </div>
+    <div
+      class="absolute top-[20%] right-[-10%] w-96 h-96 bg-accent-purple/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000">
+    </div>
+    <div
+      class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-accent-blue/10 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000">
+    </div>
+  </div>
 
-    <nav
-      class="fixed top-0 w-full z-50 glass border-b border-white/5 transition-all duration-300 shadow-xl shadow-bg-main/50"
-    >
-      <div
-        class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center"
-      >
-        <a
-          href="#"
-          class="font-bold text-2xl tracking-wider group relative flex items-center gap-2"
-        >
-          <i
+  <nav
+    class="fixed top-0 w-full z-50 glass border-b border-white/5 transition-all duration-300 shadow-xl shadow-bg-main/50">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+      <a href="#" class="font-bold text-2xl tracking-wider group relative flex items-center gap-2">
+        <img class="w-10" src="images/logo6.png" alt="">
+        <!-- <i
             data-lucide="sparkles"
             class="w-5 h-5 text-accent-purple group-hover:rotate-12 transition-transform duration-300"
           ></i>
@@ -151,1032 +143,764 @@
             class="bg-clip-text text-transparent bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light group-hover:from-accent-blue group-hover:via-accent-purple group-hover:to-accent-purple-light transition-all duration-300"
           >
             SM.
-          </span>
-        </a>
+          </span> -->
+      </a>
 
-        <div
-          id="nav-links"
-          class="hidden sm:flex gap-7 text-sm text-text-secondary font-medium"
-        >
-          <a
-            href="#about"
-            data-section="about"
-            class="nav-link relative hover:text-white transition duration-300"
-            >About</a
-          >
-          <a
-            href="#experience"
-            data-section="experience"
-            class="nav-link relative hover:text-white transition duration-300"
-            >Experience</a
-          >
-          <a
-            href="#projects"
-            data-section="projects"
-            class="nav-link relative hover:text-white transition duration-300"
-            >Projects</a
-          >
-          <a
-            href="#certifications"
-            data-section="certifications"
-            class="nav-link relative hover:text-white transition duration-300"
-            >Certifications</a
-          >
-          <a
-            href="#volunteering"
-            data-section="volunteering"
-            class="nav-link relative hover:text-white transition duration-300"
-            >Volunteering</a
-          >
-          <a
-            href="#contact"
-            data-section="contact"
-            class="nav-link relative hover:text-white transition duration-300"
-            >Contact</a
-          >
+      <div id="nav-links" class="hidden sm:flex gap-7 text-sm text-text-secondary font-medium">
+        <a href="#about" data-section="about"
+          class="nav-link relative hover:text-white transition duration-300">About</a>
+        <a href="#experience" data-section="experience"
+          class="nav-link relative hover:text-white transition duration-300">Experience</a>
+        <a href="#projects" data-section="projects"
+          class="nav-link relative hover:text-white transition duration-300">Projects</a>
+        <a href="#certifications" data-section="certifications"
+          class="nav-link relative hover:text-white transition duration-300">Certifications</a>
+        <a href="#volunteering" data-section="volunteering"
+          class="nav-link relative hover:text-white transition duration-300">Volunteering</a>
+        <a href="#contact" data-section="contact"
+          class="nav-link relative hover:text-white transition duration-300">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 relative">
+    <section class="min-h-screen flex flex-col justify-center pt-20 relative">
+      <div class="reveal active delay-100">
+        <div class="flex items-center text-accent-purple-light tracking-widest uppercase text-sm">
+          <div class="h-[2px] bg-accent-purple mr-3 w-[60px]"></div>
+          <div>HEY THERE!</div>
+        </div>
+
+        <h1 class="mt-3 text-white font-bold text-[52px] sm:text-[72px] md:text-[96px] leading-[1.20] tracking-tight">
+          I'm
+          <span
+            class="bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light inline-block text-transparent bg-clip-text">
+            Suruthi,
+          </span>
+          <br />
+          Software Engineer
+        </h1>
+
+        <div class="pt-6 text-text-secondary text-lg sm:text-xl">
+          <div class="max-w-2xl">
+            Passionate about solving real challenges with clean, reliable code
+            and thoughtfully designed systems
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mt-12 text-white font-medium">
+          <a href="#contact"
+            class="px-7 py-4 rounded-2xl cursor-pointer border border-accent-purple/60 flex justify-between items-center transition-all duration-200 w-[190px] hover:w-[195px] hover:border-accent-purple hover:shadow-glow-purple">
+            <span class="tracking-wide">CONTACT ME</span>
+            <span class="scale-90">
+              <i data-lucide="user" class="w-5 h-5"></i>
+            </span>
+          </a>
+
+          <a href="Suruthi_Manivannan.pdf" download
+            class="bg-gradient-to-r from-accent-blue to-accent-purple px-7 py-4 rounded-2xl cursor-pointer flex justify-between items-center transition-all duration-200 w-[180px] hover:w-[186px] hover:shadow-glow-mixed">
+            <span class="tracking-wide">MY RESUME</span>
+            <span class="scale-90">
+              <i data-lucide="arrow-down-to-line" class="w-5 h-5"></i>
+            </span>
+          </a>
         </div>
       </div>
-    </nav>
 
-    <main class="max-w-5xl mx-auto px-6 relative">
-      <section class="min-h-screen flex flex-col justify-center pt-20 relative">
-        <div class="reveal active delay-100">
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+        <i data-lucide="chevrons-down" class="w-6 h-6 text-text-secondary"></i>
+      </div>
+    </section>
+
+    <section id="about" class="py-24">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+            <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span>
+            About Me
+          </h2>
+          <p class="text-text-secondary leading-relaxed mb-6 text-lg">
+            I’m a final-year Computer Science undergraduate at the University
+            of Colombo School of Computing (UCSC) with a strong interest in
+            backend-oriented web development. I enjoy turning ideas into
+            working systems and bridging the gap between frontend needs and
+            backend reliability.
+          </p>
           <div
-            class="flex items-center text-accent-purple-light tracking-widest uppercase text-sm"
-          >
-            <div class="h-[2px] bg-accent-purple mr-3 w-[60px]"></div>
-            <div>HEY THERE!</div>
-          </div>
-
-          <h1
-            class="mt-3 text-white font-bold text-[52px] sm:text-[72px] md:text-[96px] leading-[1.20] tracking-tight"
-          >
-            I'm
-            <span
-              class="bg-gradient-to-r from-accent-blue via-accent-purple to-accent-purple-light inline-block text-transparent bg-clip-text"
-            >
-              Suruthi,
-            </span>
-            <br />
-            Software Engineer
-          </h1>
-
-          <div class="pt-6 text-text-secondary text-lg sm:text-xl">
-            <div class="max-w-2xl">
-              Passionate about solving real challenges with clean, reliable code
-              and thoughtfully designed systems
-            </div>
-          </div>
-
-          <div class="flex flex-wrap gap-4 mt-12 text-white font-medium">
-            <a
-              href="#contact"
-              class="px-7 py-4 rounded-2xl cursor-pointer border border-accent-purple/60 flex justify-between items-center transition-all duration-200 w-[190px] hover:w-[195px] hover:border-accent-purple hover:shadow-glow-purple"
-            >
-              <span class="tracking-wide">CONTACT ME</span>
-              <span class="scale-90">
-                <i data-lucide="user" class="w-5 h-5"></i>
-              </span>
-            </a>
-
-            <a
-              href="Suruthi_Manivannan.pdf"
-              download
-              class="bg-gradient-to-r from-accent-blue to-accent-purple px-7 py-4 rounded-2xl cursor-pointer flex justify-between items-center transition-all duration-200 w-[180px] hover:w-[186px] hover:shadow-glow-mixed"
-            >
-              <span class="tracking-wide">MY RESUME</span>
-              <span class="scale-90">
-                <i data-lucide="arrow-down-to-line" class="w-5 h-5"></i>
-              </span>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50"
-        >
-          <i
-            data-lucide="chevrons-down"
-            class="w-6 h-6 text-text-secondary"
-          ></i>
-        </div>
-      </section>
-
-      <section id="about" class="py-24">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-          <div class="reveal">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-              <span
-                class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"
-              ></span>
-              About Me
-            </h2>
-            <p class="text-text-secondary leading-relaxed mb-6 text-lg">
-              I’m a final-year Computer Science undergraduate at the University
-              of Colombo School of Computing (UCSC) with a strong interest in
-              backend-oriented web development. I enjoy turning ideas into
-              working systems and bridging the gap between frontend needs and
-              backend reliability.
+            class="p-4 bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 border-l-4 border-accent-purple rounded-r-lg">
+            <p class="text-gray-300 italic">
+              "Strong focus on Microservices, Spring Boot, Node.js, and
+              cloud-native development."
             </p>
-            <div
-              class="p-4 bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 border-l-4 border-accent-purple rounded-r-lg"
-            >
-              <p class="text-gray-300 italic">
-                "Strong focus on Microservices, Spring Boot, Node.js, and
-                cloud-native development."
-              </p>
-            </div>
           </div>
+        </div>
 
-          <div class="reveal delay-200">
+        <div class="reveal delay-200">
+          <div
+            class="glass p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group hover:border-accent-purple/30 transition-all duration-500">
             <div
-              class="glass p-8 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group hover:border-accent-purple/30 transition-all duration-500"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              ></div>
+              class="absolute inset-0 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            </div>
 
-              <div class="relative z-10">
-                <h3
-                  class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-accent-blue-light to-accent-purple-light"
-                >
-                  Education
-                </h3>
+            <div class="relative z-10">
+              <h3
+                class="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-accent-blue-light to-accent-purple-light">
+                Education
+              </h3>
 
-                <div class="space-y-8">
-                  <div class="relative pl-6 border-l border-white/10">
-                    <div
-                      class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-purple shadow-glow-purple"
-                    ></div>
-                    <div
-                      class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2"
-                    >
-                      <span class="text-sm font-mono text-accent-blue-light"
-                        >2022 - Present</span
-                      >
-                      <span
-                        class="text-xs font-bold bg-accent-purple/20 text-accent-purple px-2 py-1 rounded"
-                        >GPA: 3.52</span
-                      >
-                    </div>
-                    <p class="font-semibold text-lg text-white">
-                      B.Sc. (Hons) in Computer Science
-                    </p>
-                    <p class="text-sm text-text-secondary">
-                      University of Colombo School of Computing (UCSC)
-                    </p>
+              <div class="space-y-8">
+                <div class="relative pl-6 border-l border-white/10">
+                  <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-purple shadow-glow-purple">
                   </div>
-
-                  <div class="relative pl-6 border-l border-white/10">
-                    <div
-                      class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-blue"
-                    ></div>
-                    <div
-                      class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2"
-                    >
-                      <span class="text-sm font-mono text-accent-blue-light"
-                        >2007 - 2020</span
-                      >
-                    </div>
-                    <p class="font-semibold text-lg text-white">
-                      Physical Science Stream
-                    </p>
-                    <p class="text-sm text-text-secondary">Hindu Ladies' College</p>
+                  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                    <span class="text-sm font-mono text-accent-blue-light">2022 - Present</span>
+                    <span class="text-xs font-bold bg-accent-purple/20 text-accent-purple px-2 py-1 rounded">GPA:
+                      3.52</span>
                   </div>
+                  <p class="font-semibold text-lg text-white">
+                    B.Sc. (Hons) in Computer Science
+                  </p>
+                  <p class="text-sm text-text-secondary">
+                    University of Colombo School of Computing (UCSC)
+                  </p>
+                </div>
+
+                <div class="relative pl-6 border-l border-white/10">
+                  <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-accent-blue"></div>
+                  <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2">
+                    <span class="text-sm font-mono text-accent-blue-light">2007 - 2020</span>
+                  </div>
+                  <p class="font-semibold text-lg text-white">
+                    Physical Science Stream
+                  </p>
+                  <p class="text-sm text-text-secondary">Hindu Ladies' College</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="experience" class="py-24">
-        <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
+    <section id="experience" class="py-24">
+      <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
+        <span class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"></span>
+        Work Experience
+      </h2>
+
+      <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
+        <span
+          class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.6)]"></span>
+
+        <div
+          class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-purple/30 transition-all duration-300 hover:transform hover:translate-x-2">
           <span
-            class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"
-          ></span>
-          Work Experience
-        </h2>
-
-        <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
-          <span
-            class="absolute -left-[9px] top-0 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.6)]"
-          ></span>
-
-          <div
-            class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-purple/30 transition-all duration-300 hover:transform hover:translate-x-2"
-          >
+            class="inline-block px-3 py-1 mb-3 text-xs font-mono font-medium text-accent-purple-light bg-accent-purple/10 rounded-full border border-accent-purple/20">
+            Nov 2024 – May 2025
+          </span>
+          <h3 class="text-2xl font-bold text-white mb-1">
+            Software Engineer Intern
+          </h3>
+          <p class="text-accent-blue-light text-lg mb-4 font-medium flex items-center gap-2">
+            <i data-lucide="briefcase" class="w-4 h-4"></i> X-Venture Global
+            Solutions
+          </p>
+          <p class="text-text-secondary leading-relaxed max-w-3xl">
+            Contributed to the research, design, and development of the
+            Xapi-WSO2 API Manager integration by evaluating API management
+            strategies, collaborating with the WSO2 APIM team, and developing
+            a Proof of Concept using Spring Boot and Angular. Implemented API
+            validation and testing using Postman, contributed to frontend and
+            backend integration of WSO2 APIM, and designed a User Management
+            System using data structures and algorithms, object-oriented programming, design patterns, dependency
+            injection, and Hibernate.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto pt-5">
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Java</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Spring
+              Boot</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Angular</span>
             <span
-              class="inline-block px-3 py-1 mb-3 text-xs font-mono font-medium text-accent-purple-light bg-accent-purple/10 rounded-full border border-accent-purple/20"
-            >
-              Nov 2024 – May 2025
-            </span>
-            <h3 class="text-2xl font-bold text-white mb-1">
-              Software Engineer Intern
-            </h3>
-            <p
-              class="text-accent-blue-light text-lg mb-4 font-medium flex items-center gap-2"
-            >
-              <i data-lucide="briefcase" class="w-4 h-4"></i> X-Venture Global
-              Solutions
-            </p>
-            <p class="text-text-secondary leading-relaxed max-w-3xl">
-              Contributed to the research, design, and development of the
-              Xapi–WSO2 API Manager integration by evaluating API management
-              strategies, collaborating with the WSO2 APIM team, and developing
-              a Proof of Concept using Spring Boot and Angular. Implemented API
-              validation and testing using Postman, contributed to frontend and
-              backend integration of WSO2 APIM, and designed a User Management
-              System using design patterns, dependency injection, and Hibernate.
-            </p>
-            <div class="flex flex-wrap gap-2 mt-auto pt-5">
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Java</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Spring Boot</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Angular</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >TypeScript</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >WSO2 APIM</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Postman</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >MongoDB</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Keycloak</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Docker</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Git</span
-              >
-            </div>
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">TypeScript</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">WSO2 APIM</span>
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Postman</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">MongoDB</span>
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Keycloak</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Docker</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Git</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="skills" class="py-16">
-        <div class="reveal">
-          <h2
-            class="text-3xl font-bold mb-10 text-center flex items-center justify-center gap-3"
-          >
-            <span
-              class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"
-            ></span>
-            Core Tech Stack
-            <span
-              class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"
-            ></span>
-          </h2>
+    <section id="skills" class="py-16">
+      <div class="reveal">
+        <h2 class="text-3xl font-bold mb-10 text-center flex items-center justify-center gap-3">
+          <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span>
+          Core Tech Stack
+          <span class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"></span>
+        </h2>
 
-          <div
-            id="skills-slider"
-            class="flex overflow-x-auto gap-4 p-4 lg:grid lg:grid-cols-5 lg:gap-6"
-          ></div>
+        <div id="skills-slider" class="flex overflow-x-auto gap-4 p-4 lg:grid lg:grid-cols-5 lg:gap-6"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-24">
+      <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
+        <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span>
+        Projects
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-300">
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
+              <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+            </div>
+            <a href="https://github.com/CoMind-org" class="text-text-secondary hover:text-white transition-colors">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">
+            CoMind
+          </h3>
+
+          <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
+            An AI-powered platform that automatically builds backends from
+            natural language using collaborative intelligent agents,
+            coordinated through LangChain and LangGraph.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">LangChain</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">LangGraph</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Groq LLMs
+              (GPT-4.0)</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">FastAPI</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Spring
+              Boot</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React (TS +
+              Vite)</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Git</span>
+          </div>
         </div>
-      </section>
 
-      <section id="projects" class="py-24">
-        <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
-          <span
-            class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"
-          ></span>
-          Projects
+        <div
+          class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full">
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-accent-blue/10 rounded-lg text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300">
+              <i data-lucide="coffee" class="w-6 h-6"></i>
+            </div>
+            <a href="https://github.com/La-Fresca" target="_blank"
+              class="text-text-secondary hover:text-white transition-colors"><i data-lucide="github"
+                class="w-5 h-5"></i></a>
+          </div>
+
+          <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-blue-light transition-colors">
+            La Fresca
+          </h3>
+          <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
+            A cafe management system for a growing cafe chain, streamlining
+            orders, inventory, and operations using a Spring Boot backend,
+            React frontend, and a Python-based stock prediction model.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Spring
+              Boot</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React (TS +
+              Vite)</span>
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">MongoDB</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">FastAPI</span>
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Swagger</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Git</span>
+          </div>
+        </div>
+
+        <div
+          class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-blue group flex flex-col h-full delay-100">
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <a href="https://github.com/Sri-Care-Services"
+              class="text-text-secondary hover:text-white transition-colors"><i data-lucide="github"
+                class="w-5 h-5"></i></a>
+          </div>
+
+          <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors">
+            Sri Care
+          </h3>
+          <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
+            A customer care application built with a microservices
+            architecture to efficiently manage user accounts, billing, and
+            service coordination through scalable, well-defined APIs.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Microservices</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Spring
+              Boot</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">React (JS +
+              Vite)</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">React
+              Native</span>
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Node.js</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">MySQL</span>
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Swagger</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Git</span>
+          </div>
+        </div>
+
+        <div
+          class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-200">
+          <div class="flex justify-between items-start mb-6">
+            <div
+              class="p-3 bg-accent-blue/10 rounded-lg text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300">
+              <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+            </div>
+            <a href="https://github.com/suruthiii/kindheart"
+              class="text-text-secondary hover:text-white transition-colors">
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <h3 class="text-xl font-bold mb-3 text-white group-hover:text-accent-blue-light transition-colors">
+            KindHeart
+          </h3>
+
+          <p class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow">
+            A web-based charity funding system supporting Sri Lankan students
+            by securely connecting donors and beneficiaries, built using an
+            MVC architecture with a MySQL backend.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">HTML</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">CSS</span>
+            <span
+              class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">JavaScript</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">PHP</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">MySQL</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Figma</span>
+            <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Swagger</span>
+            <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Git</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="py-24">
+      <div class="reveal">
+        <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+          <span class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"></span>
+          Certifications
         </h2>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-300"
-          >
-            <div class="flex justify-between items-start mb-6">
+            class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-purple/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group">
+            <div class="flex items-start justify-between mb-6">
               <div
-                class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300"
-              >
-                <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+                class="p-3 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors">
+                <i data-lucide="badge-check" class="w-6 h-6"></i>
               </div>
-              <a
-                href="https://github.com/CoMind-org"
-                class="text-text-secondary hover:text-white transition-colors"
-              >
-                <i data-lucide="github" class="w-5 h-5"></i>
-              </a>
+              <span
+                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 border border-accent-purple/20 px-2 py-1 rounded-full">2025</span>
             </div>
-
-            <h3
-              class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors"
-            >
-              CoMind
+            <h3 class="text-lg font-bold text-white mb-2">
+              Introduction to Containers w/ Docker, Kubernetes & OpenShift
             </h3>
-
-            <p
-              class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow"
-            >
-              An AI-powered platform that automatically builds backends from
-              natural language using collaborative intelligent agents,
-              coordinated through LangChain and LangGraph.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <p class="text-sm text-text-secondary">IBM</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Docker</span>
               <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >LangChain</span
-              >
+                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Kubernetes</span>
               <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >LangGraph</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Groq LLMs (GPT-4.0)</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >FastAPI</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Spring Boot</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >React (TS + Vite)</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Git</span
-              >
+                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">OpenShift</span>
             </div>
           </div>
 
           <div
-            class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full"
-          >
-            <div class="flex justify-between items-start mb-6">
+            class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-mixed group">
+            <div class="flex items-start justify-between mb-6">
               <div
-                class="p-3 bg-accent-blue/10 rounded-lg text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300"
-              >
-                <i data-lucide="coffee" class="w-6 h-6"></i>
+                class="p-3 rounded-xl bg-accent-blue/10 text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors">
+                <i data-lucide="shield-check" class="w-6 h-6"></i>
               </div>
-              <a
-                href="https://github.com/La-Fresca"
-                target="_blank"
-                class="text-text-secondary hover:text-white transition-colors"
-                ><i data-lucide="github" class="w-5 h-5"></i
-              ></a>
+              <span
+                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 border border-accent-blue/20 px-2 py-1 rounded-full">2025</span>
             </div>
-
-            <h3
-              class="text-xl font-bold mb-3 text-white group-hover:text-accent-blue-light transition-colors"
-            >
-              La Fresca
+            <h3 class="text-lg font-bold text-white mb-2">
+              Postman API Fundamentals Student Expert
             </h3>
-            <p
-              class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow"
-            >
-              A cafe management system for a growing cafe chain, streamlining
-              orders, inventory, and operations using a Spring Boot backend,
-              React frontend, and a Python-based stock prediction model.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <p class="text-sm text-text-secondary">Postman Academy</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">APIs</span>
+              <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Postman</span>
               <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Spring Boot</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >React (TS + Vite)</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >MongoDB</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >FastAPI</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Swagger</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Git</span
-              >
+                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">Testing</span>
             </div>
           </div>
 
           <div
-            class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-purple/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-blue group flex flex-col h-full delay-100"
-          >
-            <div class="flex justify-between items-start mb-6">
+            class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-purple/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group">
+            <div class="flex items-start justify-between mb-6">
               <div
-                class="p-3 bg-accent-purple/10 rounded-lg text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors duration-300"
-              >
-                <i data-lucide="users" class="w-6 h-6"></i>
+                class="p-3 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors">
+                <i data-lucide="cloud" class="w-6 h-6"></i>
               </div>
-              <a
-                href="https://github.com/Sri-Care-Services"
-                class="text-text-secondary hover:text-white transition-colors"
-                ><i data-lucide="github" class="w-5 h-5"></i
-              ></a>
+              <span
+                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 border border-accent-purple/20 px-2 py-1 rounded-full">2023</span>
             </div>
-
-            <h3
-              class="text-xl font-bold mb-3 text-white group-hover:text-accent-purple-light transition-colors"
-            >
-              Sri Care
+            <h3 class="text-lg font-bold text-white mb-2">
+              AWS Educate Introduction to Cloud 101
             </h3>
-            <p
-              class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow"
-            >
-              A customer care application built with a microservices
-              architecture to efficiently manage user accounts, billing, and
-              service coordination through scalable, well-defined APIs.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-auto">
+            <p class="text-sm text-text-secondary">Amazon Web Services (AWS)</p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Cloud</span>
+              <span class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded">AWS</span>
               <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Microservices</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Spring Boot</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >React (JS + Vite)</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >React Native</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Node.js</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >MySQL</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Swagger</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Git</span
-              >
-            </div>
-          </div>
-
-          <div
-            class="reveal glass p-6 rounded-2xl border border-white/5 hover:border-accent-blue/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group flex flex-col h-full delay-200"
-          >
-            <div class="flex justify-between items-start mb-6">
-              <div
-                class="p-3 bg-accent-blue/10 rounded-lg text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors duration-300"
-              >
-                <i data-lucide="heart-handshake" class="w-6 h-6"></i>
-              </div>
-              <a
-                href="https://github.com/suruthiii/kindheart"
-                class="text-text-secondary hover:text-white transition-colors"
-              >
-                <i data-lucide="github" class="w-5 h-5"></i>
-              </a>
-            </div>
-
-            <h3
-              class="text-xl font-bold mb-3 text-white group-hover:text-accent-blue-light transition-colors"
-            >
-              KindHeart
-            </h3>
-
-            <p
-              class="text-sm text-text-secondary mb-6 leading-relaxed flex-grow"
-            >
-              A web-based charity funding system supporting Sri Lankan students
-              by securely connecting donors and beneficiaries, built using an
-              MVC architecture with a MySQL backend.
-            </p>
-
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >HTML</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >CSS</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >JavaScript</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >PHP</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >MySQL</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Figma</span
-              >
-              <span
-                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                >Swagger</span
-              >
-              <span
-                class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                >Git</span
-              >
+                class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded">Foundations</span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="certifications" class="py-24">
-        <div class="reveal">
-          <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
-            <span
-              class="w-10 h-1 bg-gradient-to-r from-accent-purple to-accent-blue rounded-full"
-            ></span>
-            Certifications
-          </h2>
+    <section id="volunteering" class="py-24">
+      <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
+        <span class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"></span>
+        Volunteering
+      </h2>
 
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-purple/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group"
-            >
-              <div class="flex items-start justify-between mb-6">
-                <div
-                  class="p-3 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors"
-                >
-                  <i data-lucide="badge-check" class="w-6 h-6"></i>
-                </div>
-                <span
-                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 border border-accent-purple/20 px-2 py-1 rounded-full"
-                  >2025</span
-                >
-              </div>
-              <h3 class="text-lg font-bold text-white mb-2">
-                Introduction to Containers w/ Docker, Kubernetes & OpenShift
-              </h3>
-              <p class="text-sm text-text-secondary">IBM</p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span
-                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                  >Docker</span
-                >
-                <span
-                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                  >Kubernetes</span
-                >
-                <span
-                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                  >OpenShift</span
-                >
-              </div>
-            </div>
-
-            <div
-              class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-blue/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-mixed group"
-            >
-              <div class="flex items-start justify-between mb-6">
-                <div
-                  class="p-3 rounded-xl bg-accent-blue/10 text-accent-blue group-hover:bg-accent-blue group-hover:text-white transition-colors"
-                >
-                  <i data-lucide="shield-check" class="w-6 h-6"></i>
-                </div>
-                <span
-                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 border border-accent-blue/20 px-2 py-1 rounded-full"
-                  >2025</span
-                >
-              </div>
-              <h3 class="text-lg font-bold text-white mb-2">
-                Postman API Fundamentals Student Expert
-              </h3>
-              <p class="text-sm text-text-secondary">Postman Academy</p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span
-                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                  >APIs</span
-                >
-                <span
-                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                  >Postman</span
-                >
-                <span
-                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                  >Testing</span
-                >
-              </div>
-            </div>
-
-            <div
-              class="glass p-7 rounded-2xl border border-white/5 hover:border-accent-purple/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-glow-purple group"
-            >
-              <div class="flex items-start justify-between mb-6">
-                <div
-                  class="p-3 rounded-xl bg-accent-purple/10 text-accent-purple group-hover:bg-accent-purple group-hover:text-white transition-colors"
-                >
-                  <i data-lucide="cloud" class="w-6 h-6"></i>
-                </div>
-                <span
-                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 border border-accent-purple/20 px-2 py-1 rounded-full"
-                  >2023</span
-                >
-              </div>
-              <h3 class="text-lg font-bold text-white mb-2">
-                AWS Educate Introduction to Cloud 101
-              </h3>
-              <p class="text-sm text-text-secondary">Amazon Web Services (AWS)</p>
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span
-                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                  >Cloud</span
-                >
-                <span
-                  class="text-xs font-mono text-accent-purple-light bg-accent-purple/10 px-2 py-1 rounded"
-                  >AWS</span
-                >
-                <span
-                  class="text-xs font-mono text-accent-blue-light bg-accent-blue/10 px-2 py-1 rounded"
-                  >Foundations</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="volunteering" class="py-24">
-        <h2 class="reveal text-3xl font-bold mb-12 flex items-center gap-3">
+      <div class="space-y-8">
+        <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
           <span
-            class="w-10 h-1 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full"
-          ></span>
-          Volunteering
-        </h2>
+            class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-blue shadow-[0_0_10px_rgba(76,116,247,0.55)]"></span>
 
-        <div class="space-y-8">
-          <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
-            <span
-              class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-blue shadow-[0_0_10px_rgba(76,116,247,0.55)]"
-            ></span>
-
-            <div
-              class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all duration-300 hover:transform hover:translate-x-2"
-            >
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="p-2.5 rounded-xl bg-accent-blue/10 text-accent-blue"
-                  >
-                    <i data-lucide="users-round" class="w-5 h-5"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-white">
-                    IEEE WIE Student Branch Affinity Group of UCSC
-                  </h3>
-                </div>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-blue-light bg-accent-blue/10 rounded-full border border-accent-blue/20"
-                  >2024 – 2025</span
-                >
-              </div>
-
-              <ul class="text-text-secondary leading-relaxed space-y-2">
-                <li class="flex gap-2">
-                  <span class="text-accent-purple-light">•</span>
-                  <span>Secretary — Executive Committee</span>
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-accent-purple-light">•</span>
-                  <span>Organizing Committee Member — Content — Hackaholics 6.0</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
-            <span
-              class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.55)]"
-            ></span>
-
-            <div
-              class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-purple/30 transition-all duration-300 hover:transform hover:translate-x-2"
-            >
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="p-2.5 rounded-xl bg-accent-purple/10 text-accent-purple"
-                  >
-                    <i data-lucide="layout-template" class="w-5 h-5"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-white">
-                    ACM Student Chapter of UCSC
-                  </h3>
-                </div>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-purple-light bg-accent-purple/10 rounded-full border border-accent-purple/20"
-                  >2023 – 2024</span
-                >
-              </div>
-
-              <ul class="text-text-secondary leading-relaxed space-y-2">
-                <li class="flex gap-2">
-                  <span class="text-accent-blue-light">•</span>
-                  <span>Committee Member — Content</span>
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-accent-blue-light">•</span>
-                  <span>Organizing Committee Member — Program — Introductory Session 2023</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
-            <span
-              class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-blue shadow-[0_0_10px_rgba(76,116,247,0.55)]"
-            ></span>
-
-            <div
-              class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all duration-300 hover:transform hover:translate-x-2"
-            >
-              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-                <div class="flex items-center gap-3">
-                  <div
-                    class="p-2.5 rounded-xl bg-accent-blue/10 text-accent-blue"
-                  >
-                    <i data-lucide="globe" class="w-5 h-5"></i>
-                  </div>
-                  <h3 class="text-xl font-bold text-white">
-                    IEEE Student Branch of UCSC
-                  </h3>
-                </div>
-                <span
-                  class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-blue-light bg-accent-blue/10 rounded-full border border-accent-blue/20"
-                  >2022 – 2023</span
-                >
-              </div>
-
-              <ul class="text-text-secondary leading-relaxed space-y-2">
-                <li class="flex gap-2">
-                  <span class="text-accent-purple-light">•</span>
-                  <span>Committee Member — Web</span>
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-accent-purple-light">•</span>
-                  <span>Organizing Committee Member — Content — Codyssey</span>
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-accent-purple-light">•</span>
-                  <span>Organizing Committee Member — Content — IEEE Day ’22</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="py-24 text-center reveal">
-        <div
-          class="glass max-w-3xl mx-auto p-12 rounded-3xl border border-white/10 relative overflow-hidden"
-        >
           <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-accent-purple/10 to-transparent pointer-events-none"
-          ></div>
+            class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all duration-300 hover:transform hover:translate-x-2">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="p-2.5 rounded-xl bg-accent-blue/10 text-accent-blue">
+                  <i data-lucide="users-round" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">
+                  IEEE WIE Student Branch Affinity Group of UCSC
+                </h3>
+              </div>
+              <span
+                class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-blue-light bg-accent-blue/10 rounded-full border border-accent-blue/20">2024
+                – 2025</span>
+            </div>
 
-          <h2 class="text-4xl sm:text-5xl font-bold mb-6 relative z-10">
-            Let's Connect
-          </h2>
-          <p
-            class="text-text-secondary mb-10 max-w-lg mx-auto text-lg relative z-10"
-          >
-            I'm actively looking for a software engineer role. Whether you have
-            a question or just want to say hi, I'll try my best to get back to
-            you!
-          </p>
-
-          <a
-            href="mailto:suruthi0611@gmail.com"
-            class="relative z-10 inline-block px-10 py-4 bg-gradient-to-r from-accent-blue to-accent-purple text-white rounded-xl hover:shadow-glow-mixed hover:scale-105 transition-all duration-300 font-bold shadow-lg"
-          >
-            suruthi0611@gmail.com
-          </a>
-
-          <div class="flex justify-center gap-8 mt-12 relative z-10">
-            <a
-              href="https://github.com/suruthiii"
-              class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1"
-            >
-              <i
-                data-lucide="github"
-                class="w-6 h-6 text-text-secondary group-hover:text-accent-purple transition-colors"
-              ></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/suruthi-manivannan/"
-              class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1"
-            >
-              <i
-                data-lucide="linkedin"
-                class="w-6 h-6 text-text-secondary group-hover:text-accent-blue transition-colors"
-              ></i>
-            </a>
-            <a
-              href="Suruthi_Manivannan.pdf"
-              download
-              class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1"
-            >
-              <i
-                data-lucide="file-text"
-                class="w-6 h-6 text-text-secondary group-hover:text-accent-purple transition-colors"
-              ></i>
-            </a>
+            <ul class="text-text-secondary leading-relaxed space-y-2">
+              <li class="flex gap-2">
+                <span class="text-accent-purple-light">•</span>
+                <span>Secretary — Executive Committee</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-accent-purple-light">•</span>
+                <span>Organizing Committee Member — Content — Hackaholics 6.0</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <p class="text-xs text-text-secondary mt-16 opacity-50">
-          © 2026 Suruthi Manivannan
+        <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
+          <span
+            class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-purple shadow-[0_0_10px_rgba(168,85,247,0.55)]"></span>
+
+          <div
+            class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-purple/30 transition-all duration-300 hover:transform hover:translate-x-2">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="p-2.5 rounded-xl bg-accent-purple/10 text-accent-purple">
+                  <i data-lucide="layout-template" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">
+                  ACM Student Chapter of UCSC
+                </h3>
+              </div>
+              <span
+                class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-purple-light bg-accent-purple/10 rounded-full border border-accent-purple/20">2023
+                – 2024</span>
+            </div>
+
+            <ul class="text-text-secondary leading-relaxed space-y-2">
+              <li class="flex gap-2">
+                <span class="text-accent-blue-light">•</span>
+                <span>Committee Member — Content</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-accent-blue-light">•</span>
+                <span>Organizing Committee Member — Program — Introductory Session 2023</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="reveal relative pl-8 border-l border-white/10 ml-4 md:ml-0">
+          <span
+            class="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-bg-main border-2 border-accent-blue shadow-[0_0_10px_rgba(76,116,247,0.55)]"></span>
+
+          <div
+            class="glass p-8 rounded-2xl border border-white/5 hover:border-accent-blue/30 transition-all duration-300 hover:transform hover:translate-x-2">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+              <div class="flex items-center gap-3">
+                <div class="p-2.5 rounded-xl bg-accent-blue/10 text-accent-blue">
+                  <i data-lucide="globe" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">
+                  IEEE Student Branch of UCSC
+                </h3>
+              </div>
+              <span
+                class="inline-block px-3 py-1 text-xs font-mono font-medium text-accent-blue-light bg-accent-blue/10 rounded-full border border-accent-blue/20">2022
+                – 2023</span>
+            </div>
+
+            <ul class="text-text-secondary leading-relaxed space-y-2">
+              <li class="flex gap-2">
+                <span class="text-accent-purple-light">•</span>
+                <span>Committee Member — Web</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-accent-purple-light">•</span>
+                <span>Organizing Committee Member — Content — Codyssey</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-accent-purple-light">•</span>
+                <span>Organizing Committee Member — Content — IEEE Day ’22</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-24 text-center reveal">
+      <div class="glass max-w-3xl mx-auto p-12 rounded-3xl border border-white/10 relative overflow-hidden">
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-accent-purple/10 to-transparent pointer-events-none">
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl font-bold mb-6 relative z-10">
+          Let's Connect
+        </h2>
+        <p class="text-text-secondary mb-10 max-w-lg mx-auto text-lg relative z-10">
+          I'm actively looking for a software engineer role. Whether you have
+          a question or just want to say hi, I'll try my best to get back to
+          you!
         </p>
-      </section>
-    </main>
 
-    <script>
-      const techStack = [
-        {
-          name: "Java",
-          icon: "coffee",
-          colorClass: "bg-accent-purple/10 text-accent-purple",
-          borderClass: "border-accent-purple/50",
-        },
-        {
-          name: "Spring Boot",
-          icon: "server",
-          colorClass: "bg-accent-blue/10 text-accent-blue",
-          borderClass: "border-accent-blue/50",
-        },
-        {
-          name: "Python",
-          icon: "code",
-          colorClass: "bg-accent-purple/10 text-accent-purple",
-          borderClass: "border-accent-purple/50",
-        },
-        {
-          name: "React",
-          icon: "atom",
-          colorClass: "bg-accent-blue/10 text-accent-blue",
-          borderClass: "border-accent-blue/50",
-        },
-        {
-          name: "MongoDB",
-          icon: "database",
-          colorClass: "bg-accent-purple/10 text-accent-purple",
-          borderClass: "border-accent-purple/50",
-        },
-        {
-          name: "TypeScript",
-          icon: "type",
-          colorClass: "bg-accent-blue/10 text-accent-blue",
-          borderClass: "border-accent-blue/50",
-        },
-        {
-          name: "Node.js",
-          icon: "zap",
-          colorClass: "bg-accent-purple/10 text-accent-purple",
-          borderClass: "border-accent-purple/50",
-        },
-        {
-          name: "Tailwind CSS",
-          icon: "wind",
-          colorClass: "bg-accent-blue/10 text-accent-blue",
-          borderClass: "border-accent-blue/50",
-        },
-        {
-          name: "MySQL",
-          icon: "database",
-          colorClass: "bg-accent-purple/10 text-accent-purple",
-          borderClass: "border-purple/50",
-        },
-        {
-          name: "AWS",
-          icon: "cloud",
-          colorClass: "bg-accent-blue/10 text-accent-blue",
-          borderClass: "border-blue/50",
-        },
-        {
-          name: "Git",
-          icon: "git-branch",
-          colorClass: "bg-accent-purple/10 text-accent-purple",
-          borderClass: "border-purple/50",
-        },
-        {
-          name: "Figma",
-          icon: "pen-tool",
-          colorClass: "bg-accent-blue/10 text-accent-blue",
-          borderClass: "border-blue/50",
-        },
-      ];
+        <a href="mailto:suruthi0611@gmail.com"
+          class="relative z-10 inline-block px-10 py-4 bg-gradient-to-r from-accent-blue to-accent-purple text-white rounded-xl hover:shadow-glow-mixed hover:scale-105 transition-all duration-300 font-bold shadow-lg">
+          suruthi0611@gmail.com
+        </a>
 
-      const renderSkillCards = () => {
-        const container = document.getElementById("skills-slider");
-        if (!container) return;
+        <div class="flex justify-center gap-8 mt-12 relative z-10">
+          <a href="https://github.com/suruthiii"
+            class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
+            <i data-lucide="github"
+              class="w-6 h-6 text-text-secondary group-hover:text-accent-purple transition-colors"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/suruthi-manivannan/"
+            class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
+            <i data-lucide="linkedin"
+              class="w-6 h-6 text-text-secondary group-hover:text-accent-blue transition-colors"></i>
+          </a>
+          <a href="Suruthi_Manivannan.pdf" download
+            class="group p-3 bg-white/5 rounded-full hover:bg-white/10 transition-all hover:-translate-y-1">
+            <i data-lucide="file-text"
+              class="w-6 h-6 text-text-secondary group-hover:text-accent-purple transition-colors"></i>
+          </a>
+        </div>
+      </div>
 
-        container.innerHTML = techStack
-          .map(
-            (tech, index) => `
+      <p class="text-xs text-text-secondary mt-16 opacity-50">
+        © 2026 Suruthi Manivannan
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const techStack = [
+      {
+        name: "Java",
+        icon: "java",
+        colorClass: "bg-accent-purple/10 text-accent-purple",
+        borderClass: "border-accent-purple/50",
+      },
+      {
+        name: "Spring Boot",
+        icon: "springboot",
+        colorClass: "bg-accent-blue/10 text-accent-blue",
+        borderClass: "border-accent-blue/50",
+      },
+      {
+        name: "Python",
+        icon: "python",
+        colorClass: "bg-accent-purple/10 text-accent-purple",
+        borderClass: "border-accent-purple/50",
+      },
+      {
+        name: "C",
+        icon: "c",
+        colorClass: "bg-accent-blue/10 text-accent-blue",
+        borderClass: "border-accent-blue/50",
+      },
+      {
+        name: "C++",
+        icon: "c++",
+        colorClass: "bg-accent-purple/10 text-accent-purple",
+        borderClass: "border-accent-purple/50",
+      },
+      {
+        name: "React",
+        icon: "react",
+        colorClass: "bg-accent-blue/10 text-accent-blue",
+        borderClass: "border-accent-blue/50",
+      },
+      {
+        name: "MongoDB",
+        icon: "mongodb",
+        colorClass: "bg-accent-purple/10 text-accent-purple",
+        borderClass: "border-accent-purple/50",
+      },
+      {
+        name: "TypeScript",
+        icon: "typescript",
+        colorClass: "bg-accent-blue/10 text-accent-blue",
+        borderClass: "border-accent-blue/50",
+      },
+      {
+        name: "JavaScript",
+        icon: "javascript",
+        colorClass: "bg-accent-purple/10 text-purple-blue",
+        borderClass: "border-purple-blue/50",
+      },
+      {
+        name: "Node.js",
+        icon: "node-js",
+        colorClass: "bg-accent-blue/10 text-accent-blue",
+        borderClass: "border-accent-blue/50",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "tailwind",
+        colorClass: "bg-accent-purple/10 text-accent-purple",
+        borderClass: "border-accent-purple/50",
+      },
+      {
+        name: "MySQL",
+        icon: "mysql",
+        colorClass: "bg-accent-blue/10 text-accent-blue",
+        borderClass: "border-blue/50",
+      },
+      {
+        name: "AWS",
+        icon: "aws",
+        colorClass: "bg-accent-purple/10 text-accent-purple",
+        borderClass: "border-purple/50",
+      },
+      {
+        name: "Git",
+        icon: "git",
+        colorClass: "bg-accent-blue/10 text-accent-blue",
+        borderClass: "border-blue/50",
+      },
+      {
+        name: "Figma",
+        icon: "figma",
+        colorClass: "bg-accent-purple/10 text-accent-purple",
+        borderClass: "border-purple/50",
+      },
+    ];
+
+    const renderSkillCards = () => {
+      const container = document.getElementById("skills-slider");
+      if (!container) return;
+
+      container.innerHTML = techStack
+        .map(
+          (tech, index) => `
                 <div class="
-                    flex-shrink-0 w-44 lg:w-auto skill-card glass p-6 rounded-xl border border-white/10
-                    ${
-                      index % 2 === 0
-                        ? "hover:border-purple-500/50"
-                        : "hover:border-accent-blue/50"
-                    }
-                    transition-all duration-300 hover:shadow-glow-mixed hover:-translate-y-1
+                  flex flex-col items-center text-center
+                  flex-shrink-0 w-44 lg:w-auto skill-card glass p-6 rounded-xl
+                  border border-white/10
+                  ${index % 2 === 0
+                              ? 'hover:border-purple-500/50'
+                              : 'hover:border-accent-blue/50'
+                            }
+                  transition-all duration-300 hover:shadow-glow-mixed hover:-translate-y-1
                 ">
-                    <div class="icon-wrapper p-3 rounded-xl mb-4 ${
-                      tech.colorClass
-                    } transition-colors duration-300">
-                        <i data-lucide="${tech.icon}" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">${tech.name}</h3>
+                  <img src="images/${tech.icon}.png" class="w-[50px] mb-3" />
+                  <h3 class="text-lg font-bold text-white">${tech.name}</h3>
                 </div>
             `
-          )
-          .join("");
+        )
+        .join("");
 
-        lucide.createIcons();
-      };
+      lucide.createIcons();
+    };
 
-      const revealElements = document.querySelectorAll(".reveal");
+    const revealElements = document.querySelectorAll(".reveal");
 
-      const revealOnScroll = () => {
-        const windowHeight = window.innerHeight;
-        const elementVisible = 150;
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      const elementVisible = 150;
 
-        revealElements.forEach((reveal) => {
-          const elementTop = reveal.getBoundingClientRect().top;
-          if (elementTop < windowHeight - elementVisible) {
-            reveal.classList.add("active");
-          }
-        });
+      revealElements.forEach((reveal) => {
+        const elementTop = reveal.getBoundingClientRect().top;
+        if (elementTop < windowHeight - elementVisible) {
+          reveal.classList.add("active");
+        }
+      });
 
-        const sections = document.querySelectorAll("main section");
-        let currentSection = "";
+      const sections = document.querySelectorAll("main section");
+      let currentSection = "";
 
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 100;
-          const sectionHeight = section.clientHeight;
-          if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-          ) {
-            currentSection = section.getAttribute("id");
-          }
-        });
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          currentSection = section.getAttribute("id");
+        }
+      });
 
-        document.querySelectorAll(".nav-link").forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("data-section") === currentSection) {
-            link.classList.add("active");
-          }
-        });
-      };
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("data-section") === currentSection) {
+          link.classList.add("active");
+        }
+      });
+    };
 
-      window.onload = function () {
-        renderSkillCards();
-        window.addEventListener("scroll", revealOnScroll);
-        revealOnScroll();
-        lucide.createIcons();
-      };
-    </script>
-  </body>
+    window.onload = function () {
+      renderSkillCards();
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll();
+      lucide.createIcons();
+    };
+  </script>
+</body>
+
 </html>
-
-
